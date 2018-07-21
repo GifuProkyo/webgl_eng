@@ -57,6 +57,7 @@ function answer(num) {
         quiz();
     } else {
         document.getElementById("word" + num).innerHTML = "×"
+        player.mainTimelineLabel = '';
         player.mainTimelineLabel = 'sample_哀00';
     }
 }
