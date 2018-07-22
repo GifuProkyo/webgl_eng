@@ -16,6 +16,7 @@ qa[8] = ["「顕著な」はどれ？", "suitable", "smart", "remarkable", "humi
 //初期設定
 let count = 0; //問題番号
 let q_sel = 4; //選択肢の数
+let q_num = 8; //問題の数
 
 function start() {
     // create hidden canvas for rendering
@@ -39,6 +40,10 @@ function start() {
 
 //問題表示
 function quiz() {
+    //繰り返す
+    if (count > q_num) {
+        count = 0;
+    }
     //問題
     document.getElementById("question").innerHTML = (count + 1) + "問目：" + qa[count][0];
     //選択肢
